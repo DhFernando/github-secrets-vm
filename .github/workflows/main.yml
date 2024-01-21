@@ -75,6 +75,7 @@ jobs:
             cd ./my-app
             git pull
             echo "Successfully complete the job!"
+            echo ${{ vars.COMMAND_SERVER_PORT }}
 
       - name: End JOB
         run: echo "Successfully complete the job!"
