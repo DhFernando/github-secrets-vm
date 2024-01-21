@@ -76,8 +76,6 @@ jobs:
             -----END OPENSSH PRIVATE KEY-----
           
           script: |
-            pwd
-            ls
             cd ./github-secrets-vm
             git pull
             echo "Successfully complete the job!"
@@ -87,7 +85,7 @@ jobs:
 
             # Replace placeholders with specific test values
             # Replace placeholders with actual values from GitHub Secrets
-            sudo sed -i 's/COMMAND_SERVER_PORT=/COMMAND_SERVER_PORT=7070/' .env
+            sudo sed -i "s/COMMAND_SERVER_PORT=/${{ vars.COMMAND_SERVER_PORT }}/" .env
             sudo sed -i 's/QUERY_SERVER_PORT=/QUERY_SERVER_PORT=8080/' .env
             sudo sed -i 's/WORKFLOW_ENGINE_PORT=/WORKFLOW_ENGINE_PORT=9090/' .env
 
