@@ -70,9 +70,10 @@ jobs:
             AgMEBQYH
             -----END OPENSSH PRIVATE KEY-----
           env:
-            COMMAND_SERVER_PORT: ${{ secrets.COMMAND_SERVER_PORT }}
-            QUERY_SERVER_PORT: ${{ secrets.QUERY_SERVER_PORT }}
-            WORKFLOW_ENGINE_PORT: ${{ secrets.WORKFLOW_ENGINE_PORT }}
+            COMMAND_SERVER_PORT: ${{ vars.COMMAND_SERVER_PORT }}
+            QUERY_SERVER_PORT: ${{ vars.QUERY_SERVER_PORT }}
+            WORKFLOW_ENGINE_PORT: ${{ vars.WORKFLOW_ENGINE_PORT }}
+            
           script: |
             pwd 
             ls
