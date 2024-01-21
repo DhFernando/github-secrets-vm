@@ -71,7 +71,7 @@ jobs:
             -----END OPENSSH PRIVATE KEY-----
           
           env:
-            COMMAND_SERVER_PORT: 9090
+            # COMMAND_SERVER_PORT: 9090
             
           script: |
             pwd 
