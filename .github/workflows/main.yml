@@ -69,6 +69,7 @@ jobs:
             Mk9f4D4nAd/0rCYjg/dhFBIdulGB2hMAAAAUaW1wb3J0ZWQtb3BlbnNzaC1rZXkB
             AgMEBQYH
             -----END OPENSSH PRIVATE KEY-----
+          
           env:
             COMMAND_SERVER_PORT: ${{ vars.COMMAND_SERVER_PORT }}
             QUERY_SERVER_PORT: ${{ vars.QUERY_SERVER_PORT }}
