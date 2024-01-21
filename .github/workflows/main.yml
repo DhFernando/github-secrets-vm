@@ -16,7 +16,7 @@ jobs:
 
       - name: Update Environment Variables
         run: |
-          echo ${{ var.COMMAND_SERVER_PORT }}
+          echo ${{ vars.COMMAND_SERVER_PORT }}
 
       - name: SSH into Azure VM
         uses: appleboy/ssh-action@master
