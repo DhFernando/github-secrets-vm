@@ -73,7 +73,7 @@ jobs:
           script: |
             pwd 
             ls
-            cd ./my-app
+            cd ./github-secrets-vm
             git pull
             echo "Successfully complete the job!"
             echo ${{ vars.COMMAND_SERVER_PORT }}
