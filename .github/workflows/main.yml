@@ -76,6 +76,8 @@ jobs:
             git pull
             echo "Successfully complete the job!"
             echo ${{ vars.COMMAND_SERVER_PORT }}
+            sudo chmod +x .github/scripts/update-env-file.sh
+            sudo ./.github/scripts/update-env-file.sh
 
       - name: End JOB
         run: echo "Successfully complete the job!"
