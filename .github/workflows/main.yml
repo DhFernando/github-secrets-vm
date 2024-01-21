@@ -80,6 +80,8 @@ jobs:
             git pull
             echo "Successfully complete the job!"
             echo ${{ vars.COMMAND_SERVER_PORT }}
+            echo ${{ vars.QUERY_SERVER_PORT }}
+            echo ${{ vars.WORKFLOW_ENGINE_PORT }}
 
             sudo cp .env.template .env  # Copy the template file to the new file
 
