@@ -82,7 +82,7 @@ jobs:
             git pull
             echo "Successfully complete the job!"
             echo ${{ vars.COMMAND_SERVER_PORT }}
-            # -------------
+            
             sudo templateFile=".env.template"
             sudo content=$(<"$templateFile")
 
@@ -93,11 +93,8 @@ jobs:
             sudo content=${content//WORKFLOW_ENGINE_PORT=/WORKFLOW_ENGINE_PORT=9090}
 
             # Save the modified content to a new file
-            sudo envFile=".env"
+            envFile=".env"
             sudo echo "$content" > "$envFile"
-
-            # ----------------
              
-
       - name: End JOB
         run: echo "Successfully complete the job!"
