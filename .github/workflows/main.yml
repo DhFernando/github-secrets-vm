@@ -14,10 +14,6 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Update Environment Variables
-        run: |
-          echo ${{ vars.COMMAND_SERVER_PORT }}
-
       - name: SSH into Azure VM
         uses: appleboy/ssh-action@master
         env:
