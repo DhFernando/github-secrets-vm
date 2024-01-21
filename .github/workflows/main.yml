@@ -69,7 +69,10 @@ jobs:
             Mk9f4D4nAd/0rCYjg/dhFBIdulGB2hMAAAAUaW1wb3J0ZWQtb3BlbnNzaC1rZXkB
             AgMEBQYH
             -----END OPENSSH PRIVATE KEY-----
-
+          env:
+            COMMAND_SERVER_PORT: ${{ secrets.COMMAND_SERVER_PORT }}
+            QUERY_SERVER_PORT: ${{ secrets.QUERY_SERVER_PORT }}
+            WORKFLOW_ENGINE_PORT: ${{ secrets.WORKFLOW_ENGINE_PORT }}
           script: |
             pwd 
             ls
