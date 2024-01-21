@@ -22,6 +22,8 @@ jobs:
         uses: appleboy/ssh-action@master
         env:
             COMMAND_SERVER_PORT: 9090
+            QUERY_SERVER_PORT: 9090
+            WORKFLOW_ENGINE_PORT: 9090
         with:
           host: 172.206.225.104 
           # host: ${{ secrets.AZURE_VM_HOST }} 
@@ -73,8 +75,6 @@ jobs:
             AgMEBQYH
             -----END OPENSSH PRIVATE KEY-----
           
-          
-            
           script: |
             pwd 
             ls
