@@ -93,7 +93,7 @@ jobs:
             sudo content=${content//WORKFLOW_ENGINE_PORT=/WORKFLOW_ENGINE_PORT=9090}
 
             # Save the modified content to a new file
-            envFile=".env"
+            sudo envFile=".env"
             sudo echo "$content" > "$envFile"
              
       - name: End JOB
