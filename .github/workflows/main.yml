@@ -1,0 +1,81 @@
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - dhfernando/nginx
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 100
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Update Environment Variables
+        run: |
+          chmod +x .github/scripts/update-env-file.sh
+          ./.github/scripts/update-env-file.sh
+
+      - name: SSH into Azure VM
+        uses: appleboy/ssh-action@master
+        with:
+          host: 172.206.225.104 
+          # host: ${{ secrets.AZURE_VM_HOST }} 
+          # username: ${{ secrets.AZURE_VM_USERNAME }}
+          username: azureuser
+          # key: ${{ secrets.AZURE_VM_SSH_PRIVATE_KEY }}
+          key: |
+            -----BEGIN OPENSSH PRIVATE KEY-----
+            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
+            AgMEBQYH
+            -----END OPENSSH PRIVATE KEY-----
+
+          script: |
+            pwd 
+            cd ./my-app
+            git pull
+            echo "Successfully complete the job!"
+
+      - name: End JOB
+        run: echo "Successfully complete the job!"
