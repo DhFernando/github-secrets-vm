@@ -83,6 +83,7 @@ jobs:
             echo "Successfully complete the job!"
             echo ${{ vars.COMMAND_SERVER_PORT }}
             # -------------
+            sudo -s
             templateFile=".env.template"
             content=$(<"$templateFile")
 
