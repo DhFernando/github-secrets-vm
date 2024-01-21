@@ -16,8 +16,7 @@ jobs:
 
       - name: Update Environment Variables
         run: |
-          chmod +x .github/scripts/update-env-file.sh
-          ./.github/scripts/update-env-file.sh
+          echo ${{ secrets.COMMAND_SERVER_PORT }}
 
       - name: SSH into Azure VM
         uses: appleboy/ssh-action@master
